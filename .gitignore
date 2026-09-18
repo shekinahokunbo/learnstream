@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+cdk.out/
+.venv/
+results/
+
+# superseded by scripts/measure.py
+scripts/measure.sh.deprecated
+COMMIT_MSG.txt
