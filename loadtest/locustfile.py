@@ -5,8 +5,7 @@
 Run a fixed shape so the numbers are comparable between runs, e.g.
     --users 100 --spawn-rate 10 --run-time 5m --headless --csv results/run1
 
-Record p50/p95/p99 and the failure count. Those are the numbers that belong on
-a resume; see README.md, "Metrics worth capturing".
+Record p50/p95/p99 and the failure count; measured results are in RESULTS.md.
 """
 
 import random

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Capture the four resume numbers. Run after the stack is deployed:
+"""Measure throughput, latency, idempotency and fault recovery. Run after the stack is deployed:
 
     python3 scripts/measure.py --stack LearnStreamStack --region us-east-1
 
@@ -240,7 +240,6 @@ LEARNSTREAM MEASURED RESULTS
   fault injection : {drill['recovered']}/{drill['sent']} recovered after DLQ redrive (peak DLQ {drill['peak_dlq']})
   test coverage   : {cov}
 ------------------------------------------------------------------
-Paste this block back to Claude to update the resume.
 """
     print(summary)
     with open("results/summary.txt", "w") as fh:

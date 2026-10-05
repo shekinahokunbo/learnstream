@@ -52,7 +52,7 @@ ACCOUNT=$(python3 -c "import boto3;print(boto3.client('sts',region_name='$REGION
 
 say "4/6 full test suite"
 pytest --cov=src --cov-report=term || {
-  echo "Tests failed. Nothing has been created in AWS. Paste the failure to Claude."; exit 1; }
+  echo "Tests failed. Nothing has been created in AWS."; exit 1; }
 
 say "5/6 deploy (3-6 minutes; first run also bootstraps)"
 cd infra
@@ -66,7 +66,7 @@ python3 scripts/measure.py --stack "$STACK" --region "$REGION"
 
 cat <<'DONE'
 
-Numbers are saved in results/summary.txt. Paste that block to Claude.
+Numbers are saved in results/summary.txt.
 
 When you are done measuring, tear it down so nothing keeps billing:
     cd infra && npx aws-cdk@2 destroy
